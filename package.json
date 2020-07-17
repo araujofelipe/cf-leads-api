@@ -1,12 +1,12 @@
 {
-  "name": "coachfunnels-leads",
+  "name": "cf-leads-api",
   "version": "1.0.0",
   "description": "'A lead capture service'",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "CoachFunnels",
+  "author": "CoachFunnels. Felipe Araújo",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
