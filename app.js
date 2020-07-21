@@ -7,7 +7,7 @@ const app = express()
 const mongoose = require('mongoose')
 let url = 'mongodb+srv://coachfunnels:80eRQOPG7e5p1zYM@coachfunnels-0-yvayx.gcp.mongodb.net/coachfunnels?retryWrites=true&w=majority'
 let mongoDB = process.env.MONGODB_URI || url
-mongoose.connect(mongoDB,{useNewUrlParser: true })
+mongoose.connect(mongoDB,{useNewUrlParser: true, useUnifiedTopology : true })
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Erro na Ligação ao MongoDB'))

@@ -4,7 +4,7 @@
   "description": "'A lead capture service'",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "author": "CoachFunnels. Felipe Araújo",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongodb": "^3.5.5",
-    "mongoose": "^5.9.7"
+    "mongoose": "^5.9.7",
+    "nodemon": "^2.0.4"
   }
 }
