@@ -32,10 +32,7 @@ exports.list = (req, res) => {
     console.log(result)
     ;(result &&
       Lead.find({ owner: owner.email }, (err, leads_) => {
-        res
-          .status(200)
-          .send(uniqBy(leads_, JSON.stringify))
-          .set('access-control-allow-origin', '*')
+        res.status(200).send(uniqBy(leads_, JSON.stringify))
       })) ||
       res.status(404).send([])
   })
