@@ -4,11 +4,16 @@ var cors = require('cors')
 
 const leads = require('./routes/leads.route')
 const app = express()
-const corsOptions = {
-  origin: '*',
-  optionsSuccessStatus: 200,
+const options = {
+  setHeaders: function (res, path, stat) {
+    res.set('Access-Control-Allow-Origin', '*')
+  },
 }
-app.options('*', cors(corsOptions))
+
+app.use(express.static('public', options))
+
+app.use(cors())
+
 const mongoose = require('mongoose')
 let url =
   'mongodb+srv://coachfunnels:80eRQOPG7e5p1zYM@coachfunnels-0-yvayx.gcp.mongodb.net/coachfunnels?retryWrites=true&w=majority'
