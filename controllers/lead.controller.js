@@ -28,18 +28,16 @@ exports.create = (req, res) => {
 exports.list = (req, res) => {
   console.log(req, res)
   const { owner } = req.body
-  if (owner) {
-    compareSalt(owner.email, owner.psw).then(result => {
+  ;(owner &&
+    compareSalt(owner?.email, owner?.psw).then(result => {
       console.log(result)
       ;(result &&
         Lead.find({ owner: owner.email }, (err, leads_) => {
           res.status(200).send(uniqBy(leads_, JSON.stringify))
         })) ||
         res.status(404).send([])
-    })
-  } else {
-    res.status(204)
-  }
+    })) ||
+    res.status(204).end()
 }
 
 exports.s = (req, res) => {
