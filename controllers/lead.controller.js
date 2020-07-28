@@ -27,7 +27,6 @@ exports.create = (req, res) => {
 
 exports.list = (req, res) => {
   const { owner } = req.body
-  console.log(owner)
   compareSalt(owner.email, owner.psw).then(result => {
     console.log(result)
     ;(result &&
@@ -43,8 +42,4 @@ exports.s = (req, res) => {
   genSalt(owner).then(result => {
     res.status(200).send(result)
   })
-}
-
-exports.options = (req, res) => {
-  res.status(204)
 }

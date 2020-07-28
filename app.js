@@ -4,7 +4,7 @@ var cors = require('cors')
 
 const leads = require('./routes/leads.route')
 const app = express()
-
+app.use(cors())
 const mongoose = require('mongoose')
 let url =
   'mongodb+srv://coachfunnels:80eRQOPG7e5p1zYM@coachfunnels-0-yvayx.gcp.mongodb.net/coachfunnels?retryWrites=true&w=majority'
