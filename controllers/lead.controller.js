@@ -28,7 +28,7 @@ exports.create = (req, res) => {
 exports.list = (req, res) => {
   console.log(req, res)
   const { owner } = req.body
-  compareSalt(owner?.email, owner?.psw).then(result => {
+  compareSalt(owner.email, owner.psw).then(result => {
     console.log(result)
     ;(result &&
       Lead.find({ owner: owner.email }, (err, leads_) => {
