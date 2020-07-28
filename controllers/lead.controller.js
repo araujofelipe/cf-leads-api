@@ -44,3 +44,7 @@ exports.s = (req, res) => {
     res.status(200).send(result)
   })
 }
+
+exports.options = (req, res) => {
+  res.status(204)
+}
