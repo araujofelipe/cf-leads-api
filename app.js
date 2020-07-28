@@ -12,8 +12,6 @@ const options = {
 
 app.use(express.static('public', options))
 
-app.use(cors())
-
 const mongoose = require('mongoose')
 let url =
   'mongodb+srv://coachfunnels:80eRQOPG7e5p1zYM@coachfunnels-0-yvayx.gcp.mongodb.net/coachfunnels?retryWrites=true&w=majority'
